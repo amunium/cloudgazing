@@ -1,0 +1,64 @@
+ul.list { 
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+/* spesifiserer item class til grid-container*/
+.head {
+    grid-area: head;
+    background: url(petterTittel.jpg);
+    background-size: contain;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 20px;
+    height: 100px;
+}
+
+.main {grid-area: main;}
+.info {grid-area: info;}
+.foot {grid-area: foot;}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        'head head head head'
+        'main main main info'
+        'foot foot foot foot';
+        gap: 5px;
+}
+
+.container {
+    display: flex;
+    width: auto;
+    margin: 5px;
+    padding: 5px;
+    border: 3px rgb(85, 67, 88) solid;
+    border-radius: 5px;
+}
+
+/* main har også en liten grid */
+.main > container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+/* styles h2 specifically within container */
+.container > h2 {
+    text-align: center;
+    margin: 10px;
+}
+
+/* styles all images within container */
+.container > img {
+    height: auto;
+    width: 100px;
+}
+
+/* styles an id */
+#botInfo {
+    border: hidden;
+    border-style: dotted hidden hidden hidden;
+    align-content: center;
+    text-align: center
+}
