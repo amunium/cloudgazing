@@ -14,7 +14,7 @@ ul.list {
     height: 100px;
 }
 
-.main {grid-area: main;}
+.text {grid-area: text;}
 .info {grid-area: info;}
 .foot {grid-area: foot;}
 
@@ -22,7 +22,7 @@ ul.list {
     display: grid;
     grid-template-areas: 
         'head head head head'
-        'main main main info'
+        'text text text info'
         'foot foot foot foot';
         gap: 5px;
 }
@@ -36,8 +36,8 @@ ul.list {
     border-radius: 5px;
 }
 
-/* main har også en liten grid */
-.main > container {
+/* text har også en liten grid */
+.text > container {
     display: inline-grid;
     grid-template-columns: auto auto auto;
 }
