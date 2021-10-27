@@ -1,17 +1,75 @@
 body {
     padding: 0;
     margin: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #FFC700;
+
 }
-#top_menu {
-    position: absolute;
-    width: 99.85%;
-    height: 25%;
-    top: 0%;
-    left: 0%;
-    background: #333333;
-    border: 1px solid black;
+ul.list { 
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+/* spesifiserer item class til grid-container*/
+.head {
+    grid-area: head;
+    background: url();
+    background-size: contain;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 50%;
+    background: red;
+}
+
+.main {grid-area: main;}
+.infoR {
+    grid-area: infoR;
+    max-width: 20   0px;
+}
+.infoL {grid-area: infoL;}
+.foot {grid-area: foot;}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        'head head head head head'
+        'infoL main main main infoR'
+        'infoL foot foot foot infoR';
+        gap: 5px;
+}
+
+.container {
+    display: flex;
+    width: auto;
+    margin: 5px;
+    padding: 5px;
+    border: 3px rgb(85, 67, 88) solid;
+    border-radius: 5px;
+}
+
+/* main har også en liten grid */
+.main > container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+/* styles h2 specifically within container */
+.container > h2 {
+    text-align: center;
+    margin: 10px;
+}
+
+/* styles all images within container */
+.container > img {
+    height: auto;
+    width: 100px;
+}
+
+/* styles an id */
+#botInfo {
+    border: hidden;
+    border-style: dotted hidden hidden hidden;
+    align-content: center;
+    text-align: center
 }
