@@ -21,42 +21,54 @@ ul.list {
     background-color: #333333;
     color: white;
     text-align: justify;
-    border: 1px solid red;
+    filter: drop-shadow(8px 8px 15px gray);
     }
 
-.main {grid-area: main;}
+.main {
+    grid-area: main;
+    padding: 20px;
+    margin: 0;
+    height: auto;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
 
 .infoR {
+    padding: 0;
+    margin: 0;
+    position: relative;
     grid-area: infoR;
-    max-width: 20   0px;
+    width: 180px;
+    height: 100%;
+    background-color: #FFC700;
+    color: white;
+    filter: drop-shadow(-8px 10px 15px gray);
 }
 .infoL {
-    padding: 0px;
-    margin: 0px;
-    grid-area: infoL;
+    padding: 0;
+    margin: 0;
     position: relative;
-    background: red;
+    grid-area: infoL;
+    width: 180px;
     height: 100%;
-    border: 1px solid black;
+    background-color: #FFC700;
+    color: black;
+    text-align: center;
+    font-size: 110%;
+    filter: drop-shadow(8px 10px 15px gray);
 }
-.foot {grid-area: foot;}
 
 .grid-container {
     display: grid;
     grid-template-areas: 
-        'head head head head head'
+        'head  head head head head' 
         'infoL main main main infoR'
-        'infoL foot foot foot infoR';
-        gap: 5px;
+        'infoL main main main infoR';   
 }
 
 .container {
-    display: flex;
-    width: auto;
-    margin: 5px;
-    padding: 5px;
-    border: 3px rgb(85, 67, 88) solid;
-    border-radius: 5px;
+
 }
 .head > #p1 {
     position: absolute;
@@ -87,25 +99,6 @@ ul.list {
     position: absolute;
     left: 75%;
     top: 40%;
-}
-
-/* main har også en liten grid */
-.main > container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-}
-
-
-/* styles h2 specifically within container */
-.container > h2 {
-    text-align: center;
-    margin: 10px;
-}
-
-/* styles all images within container */
-.container > img {
-    height: auto;
-    width: 100px;
 }
 
 /* styles an id */
