@@ -5,28 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
     <title>Hello World!</title>
 </head>
 <body>
     <div class="grid-container">
         <div class="head">
-
-                <h1><a href="index.html">(logo)CloudGazing</a></h1>
-            <!--
-                <li id="lister"><a href="hovedtema1.html">Hovedtema 1</a></li>
-                <li><a href="hovedtema2.html">Hovedtema 2</a></li>
-                <li><a href="hovedtema3.html">Hovedtema 3</a></li>
-                <li><a href="hovedtema4.html">Hovedtema 4</a></li>
-                <li><a href="hovedtema5.html">Hovedtema 5</a></li>
-                <li><a href="hovedtema6.html">Hovedtema 6</a></li>
-            -->
-            <p id="p1"><a href="hovedtema1.html">Hovedtema 1</a></p>
-            <p id="p2"><a href="hovedtema2.html">Hovedtema 2</a></p>
-            <p id="p3"><a href="hovedtema3.html">Hovedtema 3</a></p>
-            <p id="p4"><a href="hovedtema4.html">Hovedtema 4</a></p>
-            <p id="p5"><a href="hovedtema5.html">Hovedtema 5</a></p>
-            <p id="p6"><a href="hovedtema6.html">Hovedtema 6</a></p>
-
+            <h2 id="p0" onclick="changeTopic(0)" class="active">(logo)CloudGazing</h2>
+            <h2 id="p1" onclick="changeTopic(1)">Tekniske Sårbarheter</h2>
+            <h2 id="p2" onclick="changeTopic(2)">Organisatoriske Sårbarheter</h2>
+            <h2 id="p3" onclick="changeTopic(3)">Menneskelige Sårbarheter</h2>
+            <h2 id="p4" onclick="changeTopic(4)">Fysiske Sårbarheter</h2>
         </div>
         <div class="main">
             <div class="container">
@@ -60,19 +49,20 @@
         </div>
 
         <div class="infoL">
-            <ul>
-                <li>Side 1</li>
-                <li>Side 2</li>
-                <li>Side 3</li>
-                <li>Side 4</li>
-                <li>Side 5</li>
-                <li>Side 6</li>
-                <li>Side 7</li>
-            </ul>
-
+            <div class="content">test</div>
+            <div class="content">test</div>
+            <div class="content">test</div>
+            <div class="content">test</div>
+            <div class="content">test</div>
+            <div class="content">test</div>
         </div>
         <div class="infoR">
-            
+            <div class="content">begreper</div>
+            <div class="content">begreper</div>
+            <div class="content">begreper</div>
+            <div class="content">begreper</div>
+            <div class="content">begreper</div>
+            <div class="content">begreper</div>
         </div>
     </div>
 </body>

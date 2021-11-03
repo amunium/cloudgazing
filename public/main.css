@@ -4,29 +4,49 @@ body {
     font-size: 100%;
     height: 100%;
     width: 100%;
-    padding: 0;
     margin: 0;
     background: #FFC700;
 }
-ul li { 
-    padding: 10px;
-    font-size: 120%;
 
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        'head  head head head head' 
+        'infoL main main main infoR'
+        'infoL main main main infoR';   
 }
+
 /* spesifiserer item class til grid-container*/
 .head {
-    padding: 0;
-    margin: 0;
     position: relative;
     grid-area: head;
-
+    overflow: hidden;
+    min-width: max-content;
     width: 100%;
     height: 65px;
     background-color: #333333;
-    color: white;
-    text-align: justify;
     filter: drop-shadow(8px 8px 15px gray);
-    }
+    
+}
+
+.head > h2 {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.head > h2:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.head > h2.active {
+    background-color: #04AA6D;
+    color: white;
+}
 
 .main {
     grid-area: main;
@@ -49,6 +69,21 @@ ul li {
     color: white;
     filter: drop-shadow(-8px 10px 15px gray);
 }
+
+.content {
+    float: top;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.content:hover {
+    background-color: #ddd;
+    color: black;
+}
+
 .infoL {
     padding: 0;
     margin: 0;
@@ -60,47 +95,6 @@ ul li {
     color: black;
     text-align: center;
     filter: drop-shadow(8px 10px 15px gray);
-}
-
-
-.grid-container {
-    display: grid;
-    grid-template-areas: 
-
-        'head  head head head head' 
-        'infoL main main main infoR'
-        'infoL main main main infoR';   
-
-}
-.head > #p1 {
-    position: absolute;
-    left: 25%;
-    top: 40%;
-}
-.head > #p2 {
-    position: absolute;
-    left: 35%;
-    top: 40%;
-}
-.head > #p3 {
-    position: absolute;
-    left: 45%;
-    top: 40%;
-}
-.head > #p4 {
-    position: absolute;
-    left: 55%;
-    top: 40%;
-}
-.head > #p5 {
-    position: absolute;
-    left: 65%;
-    top: 40%;
-}
-.head > #p6 {
-    position: absolute;
-    left: 75%;
-    top: 40%;
 }
 
 /* styles an id */
