@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <title>CloudGazing</title>
+    <script src="/__/firebase/9.3.0/firebase-app-compat.js"></script>
+    <script src="/__/firebase/9.3.0/firebase-database-compat.js"></script>
     <script src="script.js"></script>
-    <title>Hello World!</title>
 </head>
-<body>
+<body onload="pageInit();">
     <div class="grid-container">
-        <div class="head">
+        <div class="head" id="topBar">
             <h2 id="p0" onclick="changeTopic(0)" class="active">(logo)CloudGazing</h2>
             <h2 id="p1" onclick="changeTopic(1)">Tekniske Sårbarheter</h2>
             <h2 id="p2" onclick="changeTopic(2)">Organisatoriske Sårbarheter</h2>
@@ -18,37 +20,17 @@
             <h2 id="p4" onclick="changeTopic(4)">Fysiske Sårbarheter</h2>
         </div>
         <div class="main">
-            <div class="container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie purus dolor. Vivamus feugiat libero eu cursus elementum. Suspendisse viverra et velit nec porta. Ut vel eros et ipsum imperdiet ornare accumsan ut dui. Vivamus lacinia sapien sed magna ultrices vehicula. Mauris fringilla ipsum sed ipsum condimentum, eget bibendum ante aliquam. Aliquam interdum malesuada est quis dignissim. In pretium enim eros, sit amet fermentum tellus viverra vel. In sollicitudin mauris vitae lectus pellentesque, nec elementum eros congue. Nullam vitae posuere erat. Vivamus ligula justo, ultrices ornare aliquam in, iaculis non ante. Mauris varius felis nec suscipit iaculis. Sed turpis mauris, tristique at turpis quis, sollicitudin egestas dui. Etiam egestas in justo nec aliquam. Donec vulputate urna vitae nunc interdum dignissim. Nullam nec facilisis lectus, a mollis justo.
-
-                    Integer consectetur ipsum neque, volutpat posuere justo fermentum non. Nam bibendum arcu ac nisl cursus, eu mollis ex ornare. Phasellus imperdiet justo interdum pulvinar vehicula. Praesent laoreet ligula in justo tempus congue. Duis mauris sem, euismod euismod euismod ut, placerat sit amet nisl. Vivamus sed ligula risus. Aenean elit libero, congue non est ut, semper aliquam lacus. Nunc sit amet purus lacinia, tempor nulla ac, posuere ligula. In hac habitasse platea dictumst. Suspendisse nisi tortor, sodales ut turpis efficitur, condimentum congue felis. Nulla finibus semper scelerisque. Fusce iaculis lorem at urna dapibus, nec ultricies diam facilisis. Curabitur et aliquet dolor, non venenatis mauris. Donec congue quam nec quam porta egestas. Curabitur ac tellus augue. Vivamus fermentum magna sit amet vestibulum bibendum.
-                    
-                    Suspendisse malesuada sed eros id interdum. Vestibulum ullamcorper quam non nulla bibendum fermentum. Ut justo ante, tincidunt eget condimentum vel, condimentum sed ex. Curabitur vel sagittis purus. Integer eget iaculis ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris vel nulla libero. Maecenas lobortis nibh quis suscipit imperdiet. Vestibulum nibh nisi, euismod id mollis at, eleifend id massa. Etiam vestibulum, ex et feugiat gravida, sem dui pretium felis, id dictum magna dui non enim. Fusce mattis lectus non tempor pharetra. Donec sit amet consequat erat. Vivamus urna sem, aliquet at tellus a, vehicula auctor eros. In at urna lacus. Vestibulum lectus lacus, dapibus et luctus et, elementum id sem. Nulla aliquet dapibus pulvinar.
-                    
-                    Mauris in gravida ligula. Sed malesuada, sem ac tincidunt consectetur, massa purus lacinia augue, at lobortis arcu urna ut arcu. Suspendisse potenti. Nam odio mauris, euismod vitae est ut, accumsan sollicitudin quam. Duis rhoncus cursus interdum. Donec vulputate ante ac mauris tincidunt dapibus. Ut eu congue ex, ac aliquam nulla. Integer eleifend massa et sem facilisis, et euismod tellus lobortis. Nullam pharetra massa elit, venenatis scelerisque risus accumsan eu. Nunc eleifend a urna vitae efficitur. Nulla nec nulla ac neque volutpat laoreet a in purus. Sed accumsan lacus eros, ac volutpat quam tincidunt sit amet. Suspendisse volutpat elit non nisi vehicula, et lacinia metus tempus.
-                    
-                    Integer convallis lacinia purus. Donec at dignissim arcu. Ut vitae pellentesque dui, eu euismod dolor. Phasellus velit nisi, mattis at maximus id, vestibulum ut leo. Nullam quis ultricies nulla. Vestibulum venenatis est vitae dapibus lobortis. Duis odio nibh, bibendum rutrum nisl nec, rutrum iaculis dolor. Maecenas semper urna imperdiet fermentum maximus. Nullam pretium urna justo, vel vestibulum quam condimentum id. Phasellus gravida dictum dignissim.</p>
-                    
-                </div>
-                <div class="container">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia vehicula leo a ornare. In vulputate consequat justo, sed lobortis sem lobortis sit amet. Nullam ac viverra metus. Praesent eleifend consectetur gravida. Suspendisse potenti. Donec vehicula nec ex sit amet tristique. Pellentesque varius diam eget massa blandit, euismod cursus est tristique. Fusce nec lectus in ipsum hendrerit feugiat. Duis sed mi quam. Suspendisse a tristique augue. Mauris semper lobortis risus, vitae mollis ligula consectetur id. Nullam euismod mollis varius. Pellentesque ut ligula egestas, porttitor ex at, mollis libero. Etiam tristique malesuada lacinia.
-
-                        Phasellus blandit lobortis leo. Nulla mollis dolor ut erat sodales volutpat. Nunc molestie diam sit amet lorem scelerisque tempus. Phasellus quis gravida nibh, a efficitur neque. Pellentesque lobortis suscipit lacus a pretium. Phasellus commodo efficitur augue non imperdiet. Mauris ut elit a tellus laoreet bibendum in et ligula. Phasellus dictum eu sapien vel iaculis. In et eleifend neque. Donec fermentum tempus odio, a pretium nisl iaculis id. Vivamus at augue quis turpis hendrerit sollicitudin. Nullam a nulla pulvinar enim ullamcorper suscipit in ut ligula.
-                        
-                        Phasellus congue dolor tellus, ut gravida elit faucibus a. Proin non porta metus. Nullam auctor dictum tortor, eu bibendum justo pretium a. Sed finibus semper tortor at feugiat. Suspendisse fermentum pulvinar porttitor. Ut suscipit pellentesque urna, nec egestas turpis. Suspendisse at blandit diam, ac tincidunt enim.
-                        
-                        Donec eu vestibulum libero. Praesent mollis, erat sit amet varius sagittis, justo nunc placerat lectus, vitae maximus ante dolor vitae est. Aenean blandit felis vel orci dignissim consequat. Fusce gravida accumsan tristique. Praesent gravida auctor purus, sit amet consequat augue vestibulum facilisis. Aliquam maximus, leo ac sodales ultricies, diam enim semper ex, eu pulvinar tortor mi vitae purus. Pellentesque cursus est sed ligula varius pretium. Aenean odio sem, convallis at tempus ac, luctus sit amet purus. In nec elit vel enim viverra molestie. Praesent efficitur tortor nec risus pulvinar lacinia. Aenean lobortis orci in aliquet facilisis.
-                        
-                        Sed at velit sem. Quisque euismod porttitor accumsan. Suspendisse potenti. Phasellus cursus tempus est ut dignissim. Etiam sollicitudin ullamcorper dignissim. Donec suscipit lacus sit amet lacus suscipit, at bibendum justo lobortis. Donec ac erat malesuada felis suscipit egestas ut congue risus. Suspendisse convallis velit vel sagittis pharetra. Nulla eu blandit neque.
-                        
-                        Sed sit amet mauris sem. Sed enim ligula, ultricies id tellus eu, vehicula semper eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim pharetra aliquam. Integer risus magna, tempus vel ex ac, blandit suscipit sem. Pellentesque id arcu quam. In vitae mollis arcu. Curabitur turpis dui, auctor sit amet vestibulum id, congue nec eros. Pellentesque ut dapibus diam. Aenean ullamcorper posuere lorem et rhoncus.</p>
-                </div>
-                <div class="container">
-                    
+            <div class="container" id="topicTitle">
+                <h1>Error encountered</h1>
+            </div>
+            <div class="container" id="text">
+                <p>Webpage encountered an error while trying to reach the database.</p>
+            </div>
+            <div class="container" id="soruces">
+                <p>Sources were not loaded correctly</p>
             </div>
         </div>
-
-        <div class="infoL">
+        <div class="infoL" id="infoL">
             <div class="content">test</div>
             <div class="content">test</div>
             <div class="content">test</div>
@@ -56,7 +38,7 @@
             <div class="content">test</div>
             <div class="content">test</div>
         </div>
-        <div class="infoR">
+        <div class="infoR" id="infoR">
             <div class="content">begreper</div>
             <div class="content">begreper</div>
             <div class="content">begreper</div>

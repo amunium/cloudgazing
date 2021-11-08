@@ -1,0 +1,25 @@
+{
+  "name": "cloudgazing",
+  "module":"true",
+  "version": "1.0.0",
+  "description": "Cloudgazing is webpage made for a project in the subject \"Cybersecurity and teamwork\".",
+  "main": "index.html",
+  "dependencies": {
+    "firebase-tools": "^9.22.0",
+    "firebase": "^9.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amunium/cloudgazing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amunium/cloudgazing/issues"
+  },
+  "homepage": "https://github.com/amunium/cloudgazing#readme"
+}
