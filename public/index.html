@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>CloudGazing</title>
-    <script src="/__/firebase/9.3.0/firebase-app-compat.js"></script>
-    <script src="/__/firebase/9.3.0/firebase-database-compat.js"></script>
-    <script src="script.js"></script>
 </head>
-<body onload="pageInit();">
+<body>
     <div class="grid-container">
         <div class="head" id="topBar">
-            <h2 id="p0" onclick="changeTopic(0)" class="active">(logo)CloudGazing</h2>
-            <h2 id="p1" onclick="changeTopic(1)">Tekniske Sårbarheter</h2>
-            <h2 id="p2" onclick="changeTopic(2)">Organisatoriske Sårbarheter</h2>
-            <h2 id="p3" onclick="changeTopic(3)">Menneskelige Sårbarheter</h2>
-            <h2 id="p4" onclick="changeTopic(4)">Fysiske Sårbarheter</h2>
+            <h2 id="p0" class="active">(logo)CloudGazing</h2>
+            <h2 id="p1">Tekniske Sårbarheter</h2>
+            <h2 id="p2">Organisatoriske Sårbarheter</h2>
+            <h2 id="p3">Menneskelige Sårbarheter</h2>
+            <h2 id="p4">Fysiske Sårbarheter</h2>
         </div>
         <div class="main">
             <div class="container" id="topicTitle">
@@ -47,5 +44,10 @@
             <div class="content">begreper</div>
         </div>
     </div>
+
+    <script src="/__/firebase/9.3.0/firebase-app-compat.js"></script>
+    <script src="/__/firebase/9.3.0/firebase-database-compat.js"></script>
+    <script src="/__/firebase/init.js?useEmulator=true"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

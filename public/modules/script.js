@@ -21,7 +21,7 @@ alert(app.name);
 
 // initiate database with root reference
 database = firebase.database();
-const rootRef = database.ref();
+const rootRef = database.ref(); 
 
 // shortcut to DOM elements
 var topicTitle = document.getElementById("topicTitle");
@@ -85,3 +85,5 @@ function changeText(topicId, contentId) {
     // change sources
 
 }
+
+export {pageInit, changeTopic, changeText};
