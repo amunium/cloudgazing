@@ -1,69 +1,153 @@
 body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+    height: 100%;
+    width: 100%;
     padding: 0;
     margin: 0;
-
+    background: #FFC700;
 }
-ul.list { 
-    list-style-type: disc;
-    list-style-position: outside;
+ul li { 
+    padding: 10px;
+    font-size: 120%;
 }
-
 /* spesifiserer item class til grid-container*/
 .head {
+    padding: 0;
+    margin: 0;
+    position: relative;
     grid-area: head;
-    background: url();
-    background-size: contain;
-    border-radius: 2px;
-    text-align: center;
-    padding-top: 20px;
     width: 100%;
-    height: 50%;
-    background: red;
+    height: 65px;
+    background-color: #333333;
+    color: white;
+    text-align: justify;
+    filter: drop-shadow(8px 8px 15px gray);
+    }
+    li {
+        display: inline-block;
+    }
+    li a {
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: lighter;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    h1 a {
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: lighter;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    .cool-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: width .3s
+    }
+    .cool-link:hover::after {
+        width: 100%;
+        transition: width .3s
+    }
+
+    .cool-link-black::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: black;
+        transition: width .3s
+    }
+    .cool-link-black:hover::after {
+        width: 100%;
+        transition: width .3s
+    }
+
+    h2, li {
+        display: inline-block;
+    }
+    #side1, #side2, #side3, #side4, #side5, #side6, #side7 {
+        color: black;
+    }
+.main {
+    grid-area: main;
+    padding: 50px;
+    margin: 0;
+    height: auto;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    min-width: 500px;
 }
 
-.main {grid-area: main;}
 .infoR {
+    padding: 0;
+    margin: 0;
+    position: relative;
     grid-area: infoR;
-    max-width: 20   0px;
+    min-width: 180px;
+    height: 100%;
+    background-color: #FFC700;
+    color: white;
+    filter: drop-shadow(-8px 10px 15px gray);
 }
-.infoL {grid-area: infoL;}
-.foot {grid-area: foot;}
+.infoL {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    grid-area: infoL;
+    max-width: 180px;
+    height: 100%;
+    background-color: #FFC700;
+    color: black;
+    text-align: center;
+    filter: drop-shadow(8px 10px 15px gray);
+}
 
 .grid-container {
     display: grid;
     grid-template-areas: 
-        'head head head head head'
+        'head  head head head head' 
         'infoL main main main infoR'
-        'infoL foot foot foot infoR';
-        gap: 5px;
+        'infoL main main main infoR';   
 }
-
-.container {
-    display: flex;
-    width: auto;
-    margin: 5px;
-    padding: 5px;
-    border: 3px rgb(85, 67, 88) solid;
-    border-radius: 5px;
+.head > #p1 {
+    position: absolute;
+    left: 25%;
+    top: 40%;
 }
-
-/* main har også en liten grid */
-.main > container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
+.head > #p2 {
+    position: absolute;
+    left: 35%;
+    top: 40%;
 }
-
-
-/* styles h2 specifically within container */
-.container > h2 {
-    text-align: center;
-    margin: 10px;
+.head > #p3 {
+    position: absolute;
+    left: 45%;
+    top: 40%;
 }
-
-/* styles all images within container */
-.container > img {
-    height: auto;
-    width: 100px;
+.head > #p4 {
+    position: absolute;
+    left: 55%;
+    top: 40%;
+}
+.head > #p5 {
+    position: absolute;
+    left: 65%;
+    top: 40%;
+}
+.head > #p6 {
+    position: absolute;
+    left: 75%;
+    top: 40%;
 }
 
 /* styles an id */
