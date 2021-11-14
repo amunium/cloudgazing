@@ -1,0 +1,31 @@
+<div class="container" id="topicTitle">
+    <h1>Brukerrettet sikkerhet</h1>
+</div>
+<div class="container" id="text">
+    <p>
+        Brukerrettet sikkerhet handler i stor grad om konfidensialitet og autentisering. Det går ut på at all data som innebærer personlig og sensitiv informasjon ikke skal bli tilgjengeliggjort for en tredjepart, i tillegg til at data kun skal bli aksessert av autoriserte brukere. Konfidensialitet hos skytjenester går ut på autentisering og kryptering. Datalekkasje er en stor sikkerhetsrisiko hos skytjenester, og kan gjøre at sensitiv informasjon kommer på avveie eller blir misbrukt til å gjøre mer skade på systemet.
+    </p>
+    <h3>Skadebegrensning</h3>
+    <p>
+        Én-gangspassord og Captchas er en hyppig brukt metode for å bevare brukerens personlige informasjon. For å styrke dette enda mer, så er det gunstig å kryptere og signere autentiseringsserverene, med symmetrisk og asymmetrisk kryptografi.
+    </p>
+    <p>
+        MAC (Mandatory access control) er en skalerbar autorisasjon mekanisme, som blir mye brukt hos systemer hvor konfidensialitet og sikker bevaring av personlig data er en prioritet (Tabrizchi and Rafsanjani 2020). 
+    </p>
+    <p>
+        MAC fungerer slik at det er administratoren av skytjenesten som gir tilgangs bevilgninger. Ulempen med MAC er at den ikke er særlig fleksibel, og kan senke funksjonaliteten hos systemet.
+    </p>
+    <p>
+        Andre alternativer kan være DAC (Discretionary access control) eller RBAC (Role-based access control). DAC fungerer til en viss grad likt som MAC, bortsett fra at det er mer fleksibelt men mindre sikkert. RBAC tilbyr rolle-basert aksesskontroll, som vil si at den gir tilpassede administrasjon egenskaper til et stort antall brukere i et system. Grunnet at det er et veldig sikkert system, så krever det regelmessig oppdatering, da roller og administrasjon egenskaper hos brukere endres kontinuerlig (dvs. tilgang til f.eks private filer og data). 
+    </p>
+    <p>
+        I tillegg har man ABAC (attribute-based access control), som fungerer på samme måte som mekanismene nevnt ovenfor, bortsett fra at privilegier knyttet til tilgang blir definert før en organisasjon tar i bruk systemet, noe som eliminerer mange autorisasjon problemer og gir brukerne økt sikkerhet.
+    </p>
+</div>
+<div class="container" id="soruces">
+    <h3>Kilde:</h3>
+    <p>
+        Tabrizchi, Hamed, and Marjan Kuchaki Rafsanjani. "A survey on security challenges in cloud computing: issues, threats, and solutions." The Journal of Supercomputing 76.12 (2020): 9493-9532.
+        https://www.deepdyve.com/lp/springer-journals/a-survey-on-security-challenges-in-cloud-computing-issues-threats-and-KK0BL9vT8E?
+    </p>
+</div>
